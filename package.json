@@ -1,0 +1,35 @@
+{
+  "name": "pointandgo-backend",
+  "version": "1.0.0",
+  "description": "Partie back end du site pointandgo",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "jest",
+    "coverage": "npm test -- --coverage --collectCoverageFrom=\"./src/(controllers|repositories|services|utils)/**\" --forceExit"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.36.4",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "jsonwebtoken": "^9.0.0",
+    "mailgun.js": "^8.2.1",
+    "mongoose": "^7.0.5",
+    "socket.io": "^4.7.0",
+    "stripe": "^12.9.0",
+    "supertest": "^6.3.3",
+    "uid2": "^1.0.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22"
+  },
+  "keywords": []
+}
