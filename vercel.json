@@ -8,17 +8,12 @@
   ],
   "routes": [
     {
-      "src": "/",
-      "dest": "server.js"
-    },
-    {
       "src": "/(.*)",
       "dest": "server.js"
     }
-  ]
-
+  ],
   "headers": [
-    
+
     {
 
       "source": "/api/(.*)",
@@ -38,5 +33,4 @@
     }
 
   ]
-
 }
