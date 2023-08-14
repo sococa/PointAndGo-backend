@@ -11,19 +11,19 @@ const { createServer } = require("http");
 const httpServer = createServer(app);
 
 app.use(express.json()); // pr récupérer les paramètres de type Body
-app.use(cors());
+app.use(cors(corsOptions));
 
 const corsOptions = {
-  origin: 'https://pointandgo-backend.vercel.app/',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  origin: 'https://pointandgo-frontend-alpha.vercel.app/',
 }
 
 const io = new Server(httpServer, {
   cors: {
-    origin: "corsOptions",
+    origin: corsOptions.origin,
     methods: ["GET", "POST"],
     allowedHeaders: ["my-custom-header"],
     credentials: true,
+    optionsSuccessStatus: 200
   },
 });
 
