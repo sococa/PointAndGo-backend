@@ -13,9 +13,14 @@ const httpServer = createServer(app);
 app.use(express.json()); // pr récupérer les paramètres de type Body
 app.use(cors());
 
+const corsOptions = {
+  origin: 'https://pointandgo-backend.vercel.app/',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+
 const io = new Server(httpServer, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "corsOptions",
     methods: ["GET", "POST"],
     allowedHeaders: ["my-custom-header"],
     credentials: true,
