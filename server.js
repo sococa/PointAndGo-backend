@@ -14,8 +14,7 @@ app.use(express.json()); // pr récupérer les paramètres de type Body
 app.use(cors());
 
 const corsOptions = {
-  origin: 'https://pointandgo-backend.vercel.app',
- 
+  origin: 'https://pointandgo-frontend-alpha.vercel.app/',
 }
 
 const io = new Server(httpServer, {
